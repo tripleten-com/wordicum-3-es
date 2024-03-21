@@ -1,6 +1,6 @@
 # Wordicum-3
 
-## CCreación de un repositorio
+## Creación de un repositorio
 1. Crea un repositorio para ti utilizando esta plantilla.
   Presiona el botón "Use this template" (Usar esta plantilla) y selecciona la opción "Create a new repository" (Crear un nuevo repositorio).
   ![image](https://user-images.githubusercontent.com/14962819/235599080-2819c72b-3161-48fe-926d-91c289941c20.png)
