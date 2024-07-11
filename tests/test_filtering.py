@@ -5,8 +5,8 @@ try:
     from api.views import PostModelViewSet
 except ImportError:
     raise AssertionError(
-        "When importing from the `api/views.py` file,"
-        "an error occurred in the output of `PostModelViewSet`."
+        "Al importar desde el archivo `api/views.py`,"
+        "se produjo un error en la salida de `PostModelViewSet`."
     )
 
 
@@ -19,14 +19,14 @@ except ImportError:
 )
 def test_filtering(filter_, fields_attr, field):
     assert filter_ in PostModelViewSet.filter_backends, (
-        "Check that in the `api/views.py` file, in the `PostModelViewSet` view, the attribute"
-        "` filter_backends` has the required back-end class specified according to the task."
+        "Comprueba que en el archivo `api/views.py`, en la vista `PostModelViewSet`, el atributo"
+        "`filter_backends` tenga la clase de backend requerida especificada según la tarea."
     )
 
     fields = getattr(PostModelViewSet, fields_attr)
     for actual_field in fields:
-        # Checking a substring in a string when checking the use of special characters
+        # Comprobar un substring en un string al comprobar el uso de caracteres especiales
         assert field in actual_field, (
-            f"Check that in the `api/views.py` file, in the `PostModelViewSet` view, the attribute"
-            f"`{fields_attr}` has the field specified according to the task."
+            f"Comprueba que en el archivo `api/views.py`, en la vista `PostModelViewSet`, el atributo"
+            f"`{fields_attr}` tenga el campo especificado según la tarea."
         )

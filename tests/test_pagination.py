@@ -12,17 +12,17 @@ def test_rest_framework_pagination(settings, rest_framework_key, expected_value)
     setting_name = "REST_FRAMEWORK"
     rest_framework_setting = getattr(settings, setting_name, None)
     assert rest_framework_setting is not None, (
-        f"Check that in the `wordicum/settings.py` file with the project settings, the"
-        f"` {setting_name}` setting has been added"
+        f"Comprueba que en el archivo `wordicum/settings.py` con la configuración del proyecto,"
+        f"se haya agregado la configuración `{setting_name}`"
     )
 
     assert rest_framework_key in rest_framework_setting, (
-        f"Check that in the `wordicum/settings.py` file with the project settings, `{setting_name}` "
-        f"has the added key `{rest_framework_key}`"
+        f"Comprueba que en el archivo `wordicum/settings.py` con la configuración del proyecto, `{setting_name}` "
+        f"tenga la clave `{rest_framework_key}` agregada"
     )
 
     actual_value = rest_framework_setting[rest_framework_key]
     assert actual_value == expected_value, (
-        f"Check that in the `wordicum/settings.py` file with the project settings, `{setting_name}` "
-        f"has the key `{rest_framework_key}` with the value specified by the task conditions."
+        f"Comprueba que en el archivo `wordicum/settings.py` con la configuración del proyecto, `{setting_name}` "
+        f"tenga la clave `{rest_framework_key}` con el valor especificado en las condiciones de la tarea."
     )
